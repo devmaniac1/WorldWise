@@ -7,6 +7,7 @@ import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import CityList from "./components/CityList";
 import { useEffect, useState } from "react";
+import CountryList from "./components/CountryList";
 
 const BASE_URL = "https://lglxpq-8000.csb.app";
 
@@ -46,7 +47,10 @@ export default function App() {
             path="cities"
             element={<CityList cities={cities} isloading={isLoading} />}
           />
-          <Route path="countries" element={<p>countries</p>} />
+          <Route
+            path="countries"
+            element={<CountryList cities={cities} isloading={isLoading} />}
+          />
           <Route path="form" element={<p>form</p>} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
