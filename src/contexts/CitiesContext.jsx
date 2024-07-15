@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const BASE_URL = "https://lglxpq-8000.csb.app";
+const BASE_URL = "https://3llfz9-8000.csb.app";
 
 const CitiesContext = createContext();
 
