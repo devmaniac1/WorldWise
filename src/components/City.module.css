@@ -4,6 +4,7 @@
   background-color: var(--color-dark--2);
   border-radius: 7px;
   overflow: scroll;
+  overflow-x: hidden;
 
   width: 100%;
   display: flex;
@@ -44,4 +45,22 @@
 .city a:visited {
   font-size: 1.6rem;
   color: var(--color-brand--1);
+}
+
+.city::-webkit-scrollbar {
+  width: 1rem; /* Width of the scrollbar */
+}
+
+.city::-webkit-scrollbar-track {
+  background: #f1f1f15c; /* Color of the track */
+  border-radius: 0.8rem;
+}
+
+.city::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 0.8rem;
+}
+
+.city::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
 }
