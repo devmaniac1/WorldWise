@@ -1,40 +1,88 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2024-07-16T10:23:53.193Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "40.416371399358034",
+        "lng": "-3.7020492553710938"
       },
-      "id": 17806751
+      "id": 1
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "cityName": "Barcelona",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-16T10:24:23.208Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "41.38041517477678",
+        "lng": "2.186965942382813"
       },
-      "id": 98443197
+      "id": 2
+    },
+    {
+      "cityName": "Lisbon",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2024-07-16T10:24:41.343Z",
+      "notes": "",
+      "position": {
+        "lat": "38.70694605159386",
+        "lng": "-9.135818481445314"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Recas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-16T11:20:02.599Z",
+      "notes": "",
+      "position": {
+        "lat": "40.065460682065535",
+        "lng": "-4.010009765625001"
+      },
+      "id": 4
+    },
+    {
+      "cityName": "Vistabella del Maestrazgo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-16T11:21:12.998Z",
+      "notes": "",
+      "position": {
+        "lat": "40.34654412118006",
+        "lng": "-0.26367187500000006"
+      },
+      "id": 5
+    },
+    {
+      "cityName": "Alcaniz",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-16T11:21:43.253Z",
+      "notes": "",
+      "position": {
+        "lat": "41.0130657870063",
+        "lng": "-0.30761718750000006"
+      },
+      "id": 6
+    },
+    {
+      "cityName": "Cortes de Arenoso",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-16T11:28:43.653Z",
+      "notes": "",
+      "position": {
+        "lat": "40.15788524950653",
+        "lng": "-0.5548095703125001"
+      },
+      "id": 7
     }
   ]
 }
