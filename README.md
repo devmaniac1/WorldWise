@@ -7,6 +7,7 @@
 - [🌟Features](#features)
 - [⬇️Installation](#️installation)
 - [🔧Usage](#usage)
+- [🌐Deployed Application](#deployed-application)
 
 ## 👋Introduction
 
@@ -46,3 +47,7 @@ WorldWise is an intuitive app designed to help you save and manage the places yo
 2. Open your browser and navigate to [http://localhost:5173/](http://localhost:5173/) to access WorldWise application.
 
 3. Start adding your cities to the list
+
+## 🌐Deployed Application
+
+Check out the live version of WorldWise [here](https://world-wiseapp.vercel.app/).
