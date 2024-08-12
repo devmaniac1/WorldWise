@@ -6,7 +6,7 @@ import {
   useReducer,
 } from "react";
 
-const BASE_URL = "https://3llfz9-8000.csb.app";
+const BASE_URL = "https://serverpublic.vercel.app/api/cities";
 
 const CitiesContext = createContext();
 
@@ -36,7 +36,7 @@ function reducer(state, action) {
       return {
         ...state,
         isLoading: false,
-        cities: state.cities.filter((city) => city.id !== action.payload),
+        cities: state.cities.filter((city) => city._id !== action.payload),
         currentCity: {},
       };
     case "rejected":
@@ -49,7 +49,7 @@ function reducer(state, action) {
 function CitiesProvider({ children }) {
   const [{ cities, isLoading, currentCity, error }, dispatch] = useReducer(
     reducer,
-    initialState,
+    initialState
   );
   // const [cities, setCities] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
@@ -59,8 +59,9 @@ function CitiesProvider({ children }) {
     async function fetchCities() {
       dispatch({ type: "loading" });
       try {
-        const res = await fetch(`${BASE_URL}/cities`);
+        const res = await fetch(`${BASE_URL}/getCities`);
         const data = await res.json();
+        console.log(data);
         dispatch({ type: "cities/loaded", payload: data });
       } catch (e) {
         dispatch({
@@ -78,7 +79,7 @@ function CitiesProvider({ children }) {
       dispatch({ type: "loading" });
 
       try {
-        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const res = await fetch(`${BASE_URL}/getCity/${id}`);
         const data = await res.json();
         dispatch({ type: "city/loaded", payload: data });
       } catch (e) {
@@ -88,20 +89,22 @@ function CitiesProvider({ children }) {
         });
       }
     },
-    [currentCity.id],
+    [currentCity.id]
   );
 
   async function createCity(newCity) {
     dispatch({ type: "loading" });
+    console.log(newCity);
 
     try {
-      const res = await fetch(`${BASE_URL}/cities`, {
+      const res = await fetch(`${BASE_URL}/createCity`, {
         method: "POST",
         body: JSON.stringify(newCity),
         headers: { "Content-Type": "application/json" },
       });
 
       const data = await res.json();
+      console.log(data);
       dispatch({ type: "city/created", payload: data });
     } catch (e) {
       dispatch({
@@ -115,7 +118,10 @@ function CitiesProvider({ children }) {
     dispatch({ type: "loading" });
 
     try {
-      await fetch(`${BASE_URL}/cities/${id}`, { method: "DELETE" });
+      await fetch(`${BASE_URL}/${id}`, {
+        method: "DELETE",
+      });
+      console.log(id);
       dispatch({ type: "city/deleted", payload: id });
     } catch (e) {
       dispatch({
