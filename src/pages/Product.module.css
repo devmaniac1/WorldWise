@@ -6,7 +6,7 @@
 }
 
 .product section {
-  width: clamp(80rem, 80%, 90rem);
+  /* width: clamp(80rem, 80%, 90rem); */
   margin: 6rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -31,4 +31,25 @@
 
 .product section a {
   margin-top: 2rem;
+}
+
+@media (max-width: 65em) {
+  .product h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .product {
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+  }
+  .product section {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+  .product section div {
+    text-align: center;
+    /* width: 35em; */
+  }
 }

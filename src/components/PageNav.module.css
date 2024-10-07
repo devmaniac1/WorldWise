@@ -10,6 +10,9 @@
   align-items: center;
   gap: 4rem;
 }
+.nav svg {
+  display: none;
+}
 
 .nav a:link,
 .nav a:visited {
@@ -31,4 +34,20 @@ a.ctaLink:visited {
   color: var(--color-dark--0);
   padding: 0.8rem 2rem;
   border-radius: 7px;
+}
+
+@media (max-width: 40em) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav ul {
+    display: none;
+  }
+  .nav svg {
+    display: block;
+    height: 2.4rem;
+    width: 2.4rem;
+    stroke: var(--color-brand--2);
+  }
 }
