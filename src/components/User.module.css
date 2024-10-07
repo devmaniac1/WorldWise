@@ -32,3 +32,9 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@media (max-width: 40em) {
+  .user span {
+    display: none;
+  }
+}
