@@ -28,7 +28,7 @@
 
 @media (max-width: 40em) {
   .login {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2rem;
     margin: 1rem;
   }
   .form {
