@@ -1,0 +1,23 @@
+.switchbar {
+  position: absolute;
+  z-index: 400;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #ddd;
+  font-family: inherit;
+  font-size: 1.6rem;
+  display: flex;
+  background-color: var(--color-dark--1);
+  border-radius: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.switchbar p {
+  padding: 0.7rem 1.4rem;
+}
+
+.active {
+  background-color: var(--color-brand--2);
+  border-radius: 1rem;
+}

@@ -9,5 +9,6 @@
 @media (max-width: 40em) {
   .app {
     padding: 1rem;
+    justify-content: center;
   }
 }
