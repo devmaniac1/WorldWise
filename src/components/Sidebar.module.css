@@ -8,3 +8,9 @@
   align-items: center;
   height: calc(100vh - 4.8rem);
 }
+
+@media (max-width: 40em) {
+  .sidebar {
+    padding: 2.4rem;
+  }
+}
