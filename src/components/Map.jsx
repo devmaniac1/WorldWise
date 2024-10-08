@@ -14,7 +14,7 @@ import { useGeolocation } from "../hooks/useGeolocation";
 import Button from "./Button";
 import { useUrlPosition } from "../hooks/useUrlPosition";
 
-function Map() {
+function Map({ handleWindowChange }) {
   const { cities } = useCities();
 
   const [mapPosition, setMapPosition] = useState([40, 0]);
@@ -63,7 +63,7 @@ function Map() {
           </Marker>
         ))}
         <ChangeCenter position={mapPosition} />
-        <DetectClick />
+        <DetectClick handleWindowChange={handleWindowChange} />
       </MapContainer>
     </div>
   );
@@ -75,12 +75,13 @@ function ChangeCenter({ position }) {
   return null;
 }
 
-function DetectClick() {
+function DetectClick({ handleWindowChange }) {
   const navigate = useNavigate();
 
   useMapEvents({
     click: (e) => {
       navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+      handleWindowChange("cities");
     },
   });
   return null;

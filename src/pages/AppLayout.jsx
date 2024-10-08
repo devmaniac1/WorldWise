@@ -32,7 +32,10 @@ export default function AppLayout() {
     <div className={styles.app}>
       <User />
       {windowWidth < 640 ? (
-        <MobileLayout currentWindow={currentWindow} />
+        <MobileLayout
+          currentWindow={currentWindow}
+          handleWindowChange={handleWindowChange}
+        />
       ) : (
         <DesktopLayout />
       )}
@@ -57,6 +60,10 @@ function DesktopLayout() {
   );
 }
 
-function MobileLayout({ windowWidth, currentWindow }) {
-  return currentWindow === "cities" ? <Sidebar /> : <Map />;
+function MobileLayout({ handleWindowChange, currentWindow }) {
+  return currentWindow === "cities" ? (
+    <Sidebar />
+  ) : (
+    <Map handleWindowChange={handleWindowChange} />
+  );
 }
